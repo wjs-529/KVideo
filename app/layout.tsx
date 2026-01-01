@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { PasswordGate } from "@/components/PasswordGate";
+import { siteConfig } from "@/lib/config/site-config";
 
 
 const geistSans = Geist({
@@ -18,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KVideo - 视频聚合平台",
-  description: "Multi-source video aggregation platform with beautiful Liquid Glass UI",
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: {
     icon: '/icon.png',
   },
